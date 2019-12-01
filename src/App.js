@@ -36,6 +36,9 @@ export default class App extends Component {
             <Route path="/other">
               <Content type="other course page"></Content>
             </Route>
+            <Route path="/user">
+              <Content type="user info page"></Content>
+            </Route>
             <Route path="/">
               <Content type="home page"></Content>
             </Route>

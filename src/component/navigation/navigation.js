@@ -21,8 +21,12 @@ const Navigation = props => {
   }
   return (
     <div className="navigation">
-      <div className="navigation_logo">LOGO</div>
-      <UserPicture name={props.name} />
+      <Link to="/">
+        <div className="navigation_logo">LOGO</div>
+      </Link>
+      <Link to="/user">
+        <UserPicture name={props.name} />
+      </Link>
       {navItem}
     </div>
   );
