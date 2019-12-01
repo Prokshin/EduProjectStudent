@@ -25,19 +25,19 @@ export default class App extends Component {
           <Navigation name={this.state.name}></Navigation>
           <Switch>
             <Route path="/tasks">
-              <Content type="task"></Content>
+              <Content type="my task page"></Content>
             </Route>
             <Route path="/teachers">
-              <Content type="teachers"></Content>
+              <Content type="my teachers page"></Content>
             </Route>
             <Route path="/progress">
-              <Content type="progress"></Content>
+              <Content type="progress page"></Content>
             </Route>
             <Route path="/other">
-              <Content type="other"></Content>
+              <Content type="other course page"></Content>
             </Route>
             <Route path="/">
-              <Content type="gg"></Content>
+              <Content type="home page"></Content>
             </Route>
           </Switch>
         </Router>
