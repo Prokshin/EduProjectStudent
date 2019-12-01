@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Navigation from "./component/navigation/navigation";
+import Content from "./component/content/content";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
+
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = { name: "Ivan Petrov" };
+  }
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Navigation name={this.state.name}></Navigation>
+          <Switch>
+            <Route path="/tasks">
+              <Content type="task"></Content>
+            </Route>
+            <Route path="/teachers">
+              <Content type="teachers"></Content>
+            </Route>
+            <Route path="/progress">
+              <Content type="progress"></Content>
+            </Route>
+            <Route path="/other">
+              <Content type="other"></Content>
+            </Route>
+            <Route path="/">
+              <Content type="gg"></Content>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
-
-export default App;

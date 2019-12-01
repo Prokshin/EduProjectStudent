@@ -1,0 +1,22 @@
+.navigation_item {
+  padding: 12px 15px 15px 15px;
+  text-align: left;
+  border-left: 5px solid #f8f8fb;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.navigation_item:hover {
+  background: #d5d0ff;
+  border-left: 5px solid #d5d0ff;
+  transition: 0.2s;
+}
+.active {
+  border-left: 5px solid #3f2aff;
+  background: #d5d0ff;
+}
+.active:hover {
+  border-left: 5px solid #3f2aff;
+  background: #d5d0ff;
+}
