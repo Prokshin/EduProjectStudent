@@ -3,6 +3,7 @@ import "./content.css";
 import TasksPage from "../../pages/tasks";
 import UserInfo from '../../pages/user-info'
 import TeacherPage from '../../pages/teachers'
+import HomePage from "../../pages/home";
 
 const Content = props => {
   const id = 1;
@@ -17,6 +18,9 @@ const Content = props => {
     case "teachers":
       element = <TeacherPage types="Страница с тестами и заданиями" />;
       break;
+      case "home":
+        element = <HomePage types="Страница с тестами и заданиями" />;
+        break;
     default:
   element = <div>{props.type}{props.children}</div>;
       break;

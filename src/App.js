@@ -38,7 +38,7 @@ export default class App extends Component {
               <Content type="user"></Content>
             </Route>
             <Route path="/">
-              <Content type="home page"></Content>
+              <Content type="home"></Content>
             </Route>
           </Switch>
         </Router>
