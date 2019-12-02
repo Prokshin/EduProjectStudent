@@ -18,6 +18,7 @@ export default class TasksPage extends Component {
       <Router>
         <Switch>
           <Route path={`/tasks/test_${id}`}>
+            <h2>Component</h2>
             <button onClick={this.back}>Закрыть тест</button>
             <div>
               тест, расположенный по адресу /tasks/test_id , где id - уникальный

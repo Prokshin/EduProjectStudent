@@ -8,10 +8,7 @@ import Content from "./component/content/content";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
+  Route
 } from "react-router-dom";
 
 export default class App extends Component {
@@ -26,19 +23,19 @@ export default class App extends Component {
           <Navigation name={this.state.name}></Navigation>
           <Switch>
             <Route path="/tasks">
-              <Content type="my task page"></Content>
+              <Content type="tasks"></Content>
             </Route>
             <Route path="/teachers">
-              <Content type="my teachers page"></Content>
+              <Content type="teachers"></Content>
             </Route>
             <Route path="/progress">
-              <Content type="progress page"></Content>
+              <Content type="progress"></Content>
             </Route>
             <Route path="/other">
-              <Content type="other course page"></Content>
+              <Content type="other"></Content>
             </Route>
             <Route path="/user">
-              <Content type="user info page"></Content>
+              <Content type="user"></Content>
             </Route>
             <Route path="/">
               <Content type="home page"></Content>
