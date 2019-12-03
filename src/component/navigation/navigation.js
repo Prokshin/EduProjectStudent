@@ -9,7 +9,7 @@ const Navigation = props => {
     { name: "мои задания", active: false, link: "/tasks" },
     { name: "мои преподаватели", active: false, link: "/teachers" },
     { name: "прогресс", active: true, link: "/progress" },
-    { name: "другие курсы", active: false, link: "/other" }
+    { name: "другие курсы", active: false, link: "/courses" }
   ];
   let navItem = "";
   for (let i = 0; i < nav.length; i++) {

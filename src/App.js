@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Navigation from "./component/navigation/navigation";
 import Content from "./component/content/content";
@@ -31,8 +30,8 @@ export default class App extends Component {
             <Route path="/progress">
               <Content type="progress"></Content>
             </Route>
-            <Route path="/other">
-              <Content type="other"></Content>
+            <Route path="/courses">
+              <Content type="courses"></Content>
             </Route>
             <Route path="/user">
               <Content type="user"></Content>

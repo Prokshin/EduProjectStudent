@@ -4,9 +4,9 @@ import TasksPage from "../../pages/tasks";
 import UserInfo from '../../pages/user-info'
 import TeacherPage from '../../pages/teachers'
 import HomePage from "../../pages/home";
+import CoursesPage from "../../pages/courses";
 
 const Content = props => {
-  const id = 1;
   let element = "";
   switch (props.type) {
     case "tasks":
@@ -21,6 +21,9 @@ const Content = props => {
       case "home":
         element = <HomePage types="Страница с тестами и заданиями" />;
         break;
+      case "courses":
+        element = <CoursesPage types="Страница с тестами и заданиями" />;
+         break;
     default:
   element = <div>{props.type}{props.children}</div>;
       break;
