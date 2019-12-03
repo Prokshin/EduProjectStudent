@@ -3,6 +3,7 @@ import UserPicture from "../user-picture/user-picture";
 import NavogationItem from "../navigation-item/navigation-item";
 import "./navigation.css";
 import { Link } from "react-router-dom";
+import { user } from '../../services/user-data'
 
 const Navigation = props => {
   const nav = [
@@ -25,7 +26,7 @@ const Navigation = props => {
         <div className="navigation_logo">LOGO</div>
       </Link>
       <Link to="/user">
-        <UserPicture name={props.name} />
+        <UserPicture name={user.name}  />
       </Link>
       {navItem}
     </div>

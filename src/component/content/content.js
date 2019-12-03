@@ -4,7 +4,7 @@ import TasksPage from "../../pages/tasks";
 import UserInfo from '../../pages/user-info'
 import TeacherPage from '../../pages/teachers'
 import HomePage from "../../pages/home";
-import CoursesPage from "../../pages/courses";
+import CoursesPage from "../../pages/all-courses";
 
 const Content = props => {
   let element = "";
