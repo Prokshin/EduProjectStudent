@@ -7,6 +7,7 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+import Task from "../component/task/task";
 
 export default class TasksPage extends Component {
   back() {
@@ -17,17 +18,13 @@ export default class TasksPage extends Component {
     return (
       <Router>
         <Switch>
-          <Route path={`/tasks/test_${id}`}>
-            <h2>Component</h2>
-            <button onClick={this.back}>Закрыть тест</button>
-            <div>
-              тест, расположенный по адресу /tasks/test_id , где id - уникальный
-              идентификатор теста
-            </div>
+          <Route path={`/tasks/${id}`}>
+            <Task id={id}/>
           </Route>
           <Route path={`/tasks`}>
+          <h2>Component</h2>
             <div>{this.props.types}</div>
-            <Link to={`/tasks/test_${id}`}>Ссылка на тест</Link>
+            <Link to={`/tasks/${id}`}>Ссылка на тест</Link>
           </Route>
         </Switch>
       </Router>
