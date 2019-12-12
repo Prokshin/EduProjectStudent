@@ -1,19 +1,26 @@
 import React, { Component } from "react";
-import "./task.css"
-export default class Task extends Component {
-  back() {
+import "./task.css";
+import { useParams } from "react-router-dom";
+import { DataService } from "../../services/user-data";
+
+const Task = () => {
+  const back = () => {
     window.history.back();
-  }
-  render() {
-    return (
-        <div>
-            <button onClick={this.back}>Закрыть тест</button>
-    <h2>Component task-{this.props.id}</h2>
-            <div>
-              тест, расположенный по адресу /tasks/id , где id - уникальный
-              идентификатор теста, передаётся в параметрах и здесь он равен {this.props.id}
-            </div>
-        </div>
-    );
-  }
-}
+  };
+  let { id } = useParams();
+  const data = new DataService();
+
+  const courseInfo = data.getCourseInfo(id);
+
+  return (
+    <div>
+      <h2 className="section-name">{courseInfo.name}</h2>
+      <hr></hr>
+      <div>
+        тест, расположенный по адресу /tasks/id , где id - уникальный
+        идентификатор теста, передаётся в параметрах и здесь он равен {id}
+      </div>
+    </div>
+  );
+};
+export default Task;

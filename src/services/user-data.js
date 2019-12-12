@@ -39,4 +39,7 @@ export class DataService {
   getAllUserCourses() {
     return AllUserCourses;
   }
+  getCourseInfo(id) {
+    return AllUserCourses.courses[id];
+  }
 }

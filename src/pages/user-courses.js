@@ -13,13 +13,15 @@ export default class TasksPage extends Component {
     const courses = this.data.getAllUserCourses().courses;
     let coursesEl = courses.map(n => {
       return (
-        <CourseCard
-          key={n.id}
-          id={n.id}
-          name={n.name}
-          teacher={n.teacher}
-          progress={n.progress}
-        />
+        <Link to={`/user-courses/${n.id}`}>
+          <CourseCard
+            key={n.id}
+            id={n.id}
+            name={n.name}
+            teacher={n.teacher}
+            progress={n.progress}
+          />
+        </Link>
       );
     });
     console.log(coursesEl);
@@ -27,14 +29,11 @@ export default class TasksPage extends Component {
   }
   render() {
     // const Courses = map(n => {});
-    let id = 0;
     this.UpdateCourses();
     return (
       <Router>
         <Switch>
-          <Route path={`/user-courses/${id}`}>
-            <Task id={id} />
-          </Route>
+          <Route path="/user-courses/:id" children={<Task />}></Route>
           <Route path={`/user-courses`}>
             <h2 className="section-name">Мои Курсы</h2>
             <hr></hr>
