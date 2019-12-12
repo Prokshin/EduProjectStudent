@@ -32,10 +32,10 @@ export default class TasksPage extends Component {
     return (
       <Router>
         <Switch>
-          <Route path={`/tasks/${id}`}>
+          <Route path={`/user-courses/${id}`}>
             <Task id={id} />
           </Route>
-          <Route path={`/tasks`}>
+          <Route path={`/user-courses`}>
             <h2 className="section-name">Мои Курсы</h2>
             <hr></hr>
             {this.UpdateCourses()}

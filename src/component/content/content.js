@@ -1,6 +1,6 @@
 import React from "react";
 import "./content.css";
-import TasksPage from "../../pages/tasks";
+import TasksPage from "../../pages/user-courses";
 import UserInfo from '../../pages/user-info'
 import TeacherPage from '../../pages/teachers'
 import HomePage from "../../pages/home";

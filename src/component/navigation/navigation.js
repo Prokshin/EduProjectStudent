@@ -8,7 +8,7 @@ import { user } from "../../services/user-data";
 const Navigation = props => {
   const nav = [
     { name: "личный кабинет", active: false, link: "/" },
-    { name: "мои курсы", active: false, link: "/tasks" },
+    { name: "мои курсы", active: false, link: "/user-courses" },
     { name: "мои преподователи", active: false, link: "/progress" },
     { name: "другие курсы", active: false, link: "/courses" }
   ];

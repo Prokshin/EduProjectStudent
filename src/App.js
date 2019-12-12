@@ -3,12 +3,7 @@ import "./App.css";
 import Navigation from "./component/navigation/navigation";
 import Content from "./component/content/content";
 
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default class App extends Component {
   constructor() {
@@ -21,7 +16,7 @@ export default class App extends Component {
         <Router>
           <Navigation name={this.state.name}></Navigation>
           <Switch>
-            <Route path="/tasks">
+            <Route path="/user-courses">
               <Content type="tasks"></Content>
             </Route>
             <Route path="/teachers">
