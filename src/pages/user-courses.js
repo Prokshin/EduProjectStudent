@@ -31,17 +31,16 @@ export default class TasksPage extends Component {
     // const Courses = map(n => {});
     this.UpdateCourses();
     return (
-      <Router>
-        <Switch>
-          <Route path="/user-courses/:id" children={<Task />}></Route>
-          <Route path={`/user-courses`}>
-            <h2 className="section-name">Мои Курсы</h2>
-            <hr></hr>
-            {this.UpdateCourses()}
-            <button className="btn">Добавить другие курсы</button>
-          </Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <Route path="/user-courses/:id" children={<Task />}></Route>
+        <Route path="/user-courses/">
+          <h2 className="section-name">Мои Курсы</h2>
+          <hr></hr>
+          {this.UpdateCourses()}
+          <button className="btn">Добавить другие курсы</button>
+        </Route>
+        <Route path="*">gg</Route>
+      </Switch>
     );
   }
 }

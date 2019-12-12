@@ -13,6 +13,7 @@ const Navigation = props => {
     { name: "другие курсы", active: false, link: "/courses" }
   ];
   let navItem = "";
+  const reload = () => {};
   for (let i = 0; i < nav.length; i++) {
     navItem = nav.map(n => (
       <Link key={n.link} to={n.link}>
