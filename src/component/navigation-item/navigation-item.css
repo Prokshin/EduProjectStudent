@@ -1,22 +1,25 @@
 .navigation_item {
   padding: 12px 15px 15px 15px;
   text-align: left;
-  border-left: 5px solid #f8f8fb;
+  border-left: 5px solid rgba(0, 0, 0, 0);
   font-weight: 700;
   font-size: 16px;
   transition: 0.2s;
   cursor: pointer;
+  color: #000;
+  text-decoration: none;
 }
 .navigation_item:hover {
-  background: #d5d0ff;
-  border-left: 5px solid #d5d0ff;
+  background: #bdd1d0;
+  border-left: 5px solid #bdd1d0;
   transition: 0.2s;
+  color: #db2828;
 }
 .active {
-  border-left: 5px solid #3f2aff;
-  background: #d5d0ff;
+  border-left: 5px solid #00b5ad;
+  background: #bdd1d0;
 }
 .active:hover {
-  border-left: 5px solid #3f2aff;
-  background: #d5d0ff;
+  border-left: 5px solid #00b5ad;
+  background: #bdd1d0;
 }

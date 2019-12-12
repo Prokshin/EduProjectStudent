@@ -3,13 +3,13 @@ import UserPicture from "../user-picture/user-picture";
 import NavogationItem from "../navigation-item/navigation-item";
 import "./navigation.css";
 import { Link } from "react-router-dom";
-import { user } from '../../services/user-data'
+import { user } from "../../services/user-data";
 
 const Navigation = props => {
   const nav = [
-    { name: "мои задания", active: false, link: "/tasks" },
-    { name: "мои преподаватели", active: false, link: "/teachers" },
-    { name: "прогресс", active: true, link: "/progress" },
+    { name: "личный кабинет", active: false, link: "/" },
+    { name: "мои курсы", active: false, link: "/tasks" },
+    { name: "мои преподователи", active: false, link: "/progress" },
     { name: "другие курсы", active: false, link: "/courses" }
   ];
   let navItem = "";
@@ -24,9 +24,6 @@ const Navigation = props => {
     <div className="navigation">
       <Link to="/">
         <div className="navigation_logo">LOGO</div>
-      </Link>
-      <Link to="/user">
-        <UserPicture name={user.name}  />
       </Link>
       {navItem}
     </div>

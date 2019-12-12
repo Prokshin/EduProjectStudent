@@ -20,3 +20,26 @@
 .App-link {
   color: #09d3ac;
 }
+.section-name {
+  color: #db2828;
+  font-size: 40px;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  padding: 20px;
+  background: #fff;
+  font-size: 20px;
+  margin: 30px;
+  border: 1px solid #09d3ac;
+  border-radius: 10px;
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.1);
+  color: #09d3ac;
+  transition: 0.2s;
+}
+.btn:hover {
+  background: #09d3ac;
+  color: #fff;
+  transition: 0.2s;
+}
