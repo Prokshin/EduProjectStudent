@@ -119,6 +119,49 @@ const tests = [
   }
 ];
 
+const teacher = [
+  {
+    id: 0,
+    name: "Иван Иванов",
+    img: null,
+    courses: ["0", "2"]
+  }
+];
+
+const allMyTeacher = {
+  count: 2,
+  results: [
+    {
+      id: 0,
+      name: "Иван Иванов",
+      img:
+        "https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2015&q=80",
+      courses: [
+        {
+          id: "0",
+          name: "Базы Данных"
+        },
+        {
+          id: "2",
+          name: "Функциональное программирование"
+        }
+      ]
+    },
+    {
+      id: 1,
+      name: "Пётр Петров",
+      img:
+        "https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2015&q=80",
+      courses: [
+        {
+          id: "1",
+          name: "ООП"
+        }
+      ]
+    }
+  ]
+};
+
 export class DataService {
   getAllUserCourses() {
     return AllUserCourses;
@@ -138,5 +181,11 @@ export class DataService {
   //Временно
   getAllCourses() {
     return AllUserCourses;
+  }
+  async getTeacher(id) {
+    return teacher[id];
+  }
+  async getAllMyTeachers() {
+    return allMyTeacher;
   }
 }
